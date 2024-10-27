@@ -232,16 +232,6 @@
     };
 };
   
-    user.services.syncthing = {
-      enable = true;
-      after = [ "network.target" ];
-      wantedBy = [ "default.target" ];
-      description = "Syncthing";
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = ''/etc/profiles/per-user/chaapp/bin/syncthing'';
-      };
-    };
 
 
 
