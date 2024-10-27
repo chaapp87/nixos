@@ -88,7 +88,7 @@
     usbutils # lsusb
 
   ];
-  # Bootloader.
+  # Bootnloader.
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -97,6 +97,12 @@
 
     networking = {
       hostName = "nb-media"; # Define your hostname.
+      interfaces.eno1.ipv4.addresses = [ {
+        address = "192.168.178.190";
+        prefixLength = 24;
+      } ];
+      defaultGateway = "192.168.178.1";
+      nameservers = [ "192.168.178.1" "8.8.8.8" ];
       #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
       # Enable networking
       networkmanager.enable = true;
@@ -138,7 +144,11 @@
       autoLogin.minimumUid = 1000;
     };
 
-    displayManager.defaultSession = "gnome";
+    displayManager.preStart = "sleep 7";
+    displayManager.autoLogin.enable = "true";
+    displayManager.autoLogin.user = "media";
+
+    #displayManager.defaultSession = "gnome";
     desktopManager.plasma6.enable = true;
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
@@ -181,10 +191,10 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.chaapp = {
+  users.users.media = {
     isNormalUser = true;
     linger = true;
-    description = "chaapp";
+    description = "media";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       ];
@@ -210,21 +220,18 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
 
-  systemd = {
-    user.services.ssh-agent = {
-      enable = true;
-      after = [ "network.target" ];
-      wantedBy = [ "default.target" ];
-      description = "SSH key agent";
-      serviceConfig = {
-        Type = "simple";
-        Environment=''SSH_AUTH_SOCK=%t/ssh-agent.socket'';
-        ExecStart = ''/run/current-system/sw/bin/ssh-agent -D -a $SSH_AUTH_SOCK'';
-      };
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = true;
+      AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
+      UseDns = true;
+      X11Forwarding = false;
+      PermitRootLogin = "yes"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
     };
-
+};
+  
     user.services.syncthing = {
       enable = true;
       after = [ "network.target" ];
@@ -235,7 +242,7 @@
         ExecStart = ''/etc/profiles/per-user/chaapp/bin/syncthing'';
       };
     };
-  };
+
 
 
 
