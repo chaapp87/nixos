@@ -148,7 +148,7 @@
     displayManager.autoLogin.user = "media";
 
     #displayManager.defaultSession = "gnome";
-    desktopManager.plasma6.enable = true;
+    desktopManager.xfce.enable = true;
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
     # Enable Gnome KEyring PAM in sddm
