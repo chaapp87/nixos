@@ -145,7 +145,6 @@
     };
 
     displayManager.preStart = "sleep 7";
-    displayManager.autoLogin.enable = "true";
     displayManager.autoLogin.user = "media";
 
     #displayManager.defaultSession = "gnome";
