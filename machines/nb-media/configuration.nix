@@ -137,6 +137,7 @@
         layout = "de";
         variant = "";
       };
+      desktopManager.xfce.enable = true;
     };
     # Enable the KDE Plasma Desktop Environment.
     displayManager.sddm = {
@@ -148,7 +149,7 @@
     displayManager.autoLogin.user = "media";
 
     #displayManager.defaultSession = "gnome";
-    desktopManager.xfce.enable = true;
+    
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
     # Enable Gnome KEyring PAM in sddm
