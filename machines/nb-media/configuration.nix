@@ -96,7 +96,7 @@
   };
 
     networking = {
-      hostName = "rd-nb-nixos"; # Define your hostname.
+      hostName = "nb-media"; # Define your hostname.
       #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
       # Enable networking
       networkmanager.enable = true;
@@ -138,8 +138,6 @@
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
     # Enable Gnome KEyring PAM in sddm
-    teamviewer.enable = true;
-    printing.enable = true;
     blueman.enable = true;
     pipewire = {
       enable = true;
@@ -207,7 +205,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   systemd = {
     user.services.ssh-agent = {
