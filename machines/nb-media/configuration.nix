@@ -133,7 +133,12 @@
       };
     };
     # Enable the KDE Plasma Desktop Environment.
-    displayManager.sddm.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      autoLogin.minimumUid = 1000;
+    };
+
+    displayManager.defaultSession = "gnome";
     desktopManager.plasma6.enable = true;
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
