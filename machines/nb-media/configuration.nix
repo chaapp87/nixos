@@ -92,6 +92,7 @@
     swaylock
 
     dmenu
+    pavucontrol
 
   ];
   # Bootnloader.
