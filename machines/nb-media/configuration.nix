@@ -91,6 +91,8 @@
     sway
     swaylock
 
+    dmenu
+
   ];
   # Bootnloader.
 
