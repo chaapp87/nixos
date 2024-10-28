@@ -51,16 +51,18 @@
 
 * output config
 #+begin_src shell :noweb-ref all
-  ### Output configuration
-  #
-  # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-  #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-  #
-  # Example configuration:
-  #
- output HDMI-A-1 resolution 1920x1080 position 0,0
-  #
-  # You can get the names of your outputs by running: swaymsg -t get_outputs
+   ### Output configuration
+   #
+   # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+   #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+   #
+   # Example configuration:
+   #
+  output HDMI-A-1 resolution 1920x1080 position 0,0
+  output HDMI-A-1 resolution 1920x1080 scale 1.5
+  output LVDS-1 disable
+   #
+   # You can get the names of your outputs by running: swaymsg -t get_outputs
 #+end_src
 * idle configuration
 #+begin_src shell :noweb-ref all

@@ -247,8 +247,7 @@
 
       "custom/scale": {
           "format": "scale",
-           "on-click": "swaymsg output eDP-1 scale 1.5"
-           #"on-double-click": "swaymsg output eDP-1 scale 1"
+           "on-click": "swaymsg output HDMI-A-1 scale 1.5"
       }
 
   }
