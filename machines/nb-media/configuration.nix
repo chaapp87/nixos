@@ -150,7 +150,7 @@
     };
 
     # Enable Sway
-    wayland.windowManager.sway.enable = true;
+
     
     # Auto-Login
     #displayManager.preStart = "sleep 7";
@@ -176,6 +176,8 @@
     };
   };
 
+    wayland.windowManager.sway.enable = true;
+  
     security.pam.services.sddm.enableGnomeKeyring = true;
 
   # Enable teamviewer service
