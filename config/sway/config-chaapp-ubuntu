@@ -48,7 +48,7 @@ output LVDS-1 disable
 
       # Kill focused window
       bindsym $mod+Shift+c kill
-      bindsym middle kill
+
 
       # Start your launcher
       bindsym $mod+Shift+Return exec $menu
@@ -241,6 +241,6 @@ bindsym $mod+0 input type:keyboard xkb_switch_layout next
 include /etc/sway/config.d/*
 #No titlebars
 #
-#default_border pixel
+default_border pixel
 #Gaps between windows
 gaps inner 10

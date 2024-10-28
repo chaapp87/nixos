@@ -91,7 +91,7 @@
 
         # Kill focused window
         bindsym $mod+Shift+c kill
-        bindsym middle kill
+        
 
         # Start your launcher
         bindsym $mod+Shift+Return exec $menu
@@ -309,7 +309,7 @@
 #+begin_src shell :noweb-ref all
   #No titlebars
   #
-  #default_border pixel
+  default_border pixel
 #+end_src
 * gaps between containers
 #+begin_src shell :noweb-ref all
