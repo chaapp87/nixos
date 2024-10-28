@@ -30,7 +30,7 @@
     gnumake
     gcc
     libtool
-
+    font-awesome
      # archives
     zip
     xz
@@ -89,6 +89,10 @@
 
     # pcsclite for smartcards
     pcsclite
+
+    sway
+    waybar
+    swaylock
 
   ];
   # Bootloader.
