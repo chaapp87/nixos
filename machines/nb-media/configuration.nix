@@ -150,7 +150,7 @@
     };
 
     # Enable Sway
-    wayland.windowManager.sway.enable = true
+    wayland.windowManager.sway.enable = true;
     
     # Auto-Login
     #displayManager.preStart = "sleep 7";
