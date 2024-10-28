@@ -87,6 +87,9 @@
     pciutils # lspci
     usbutils # lsusb
 
+    # pcsclite for smartcards
+    pcsclite
+
   ];
   # Bootloader.
 
@@ -140,6 +143,7 @@
     # Enable Gnome KEyring PAM in sddm
     teamviewer.enable = true;
     printing.enable = true;
+    pcscd.enable = true;
     blueman.enable = true;
     pipewire = {
       enable = true;
