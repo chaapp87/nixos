@@ -31,9 +31,6 @@
     gcc
     libtool
 
-    font-awesome
-    ttf-jetbrains-mono-nerd
-    
      # archives
     zip
     xz
@@ -252,7 +249,10 @@
   
 
 
-
+fonts.packages = with pkgs; [
+    font-awesome
+    inter
+   ];
 
 
   # Open ports in the firewall.
