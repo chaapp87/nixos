@@ -113,31 +113,40 @@
     profiles.media.id = 0;
     profiles.media.isDefault = true;
     profiles.media.bookmarks = [
+
       {
-        name = "Dennsen86";
-        keyword = "twitch";
+        name = "Nix sites";
         toolbar = true;
-        url = "https://www.twitch.tv/dennsen86";
-      }
-      {
-        name = "Nayfal";
-        keyword = "twitch";
-        toolbar = true;
-        url = "https://www.twitch.tv/nayfal";
-      }
-      {
-        name = "Twitch Startseite";
-        keyword = "twitch";
-        toolbar = true;
-        url = "https://www.twitch.tv";
-      }
-      {
-        name = "Youtube";
-        keyword = "youtube";
-        toolbar = true;
-        url = "https://www.youtube.com";
+        bookmarks = [
+      
+          {
+            name = "Dennsen86";
+            keyword = "twitch";
+            toolbar = true;
+            url = "https://www.twitch.tv/dennsen86";
+          }
+          {
+            name = "Nayfal";
+            keyword = "twitch";
+            toolbar = true;
+            url = "https://www.twitch.tv/nayfal";
+          }
+          {
+            name = "Twitch Startseite";
+            keyword = "twitch";
+            toolbar = true;
+            url = "https://www.twitch.tv";
+          }
+          {
+            name = "Youtube";
+            keyword = "youtube";
+            toolbar = true;
+            url = "https://www.youtube.com";
+          }
+        ];
       }
     ];
+      
     profiles.media.settings = {
       "browser.toolbars.bookmarks.visibility" = "always";
       "browser.search.region" = "DE";
