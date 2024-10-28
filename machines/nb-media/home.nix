@@ -173,12 +173,12 @@
 
   # Sway Config 
   home.file."${config.xdg.configHome}/sway/config" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/root/nixos/config/sway/config-nb-media";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/config/sway/config-nb-media";
   };
 
   # Waybar config
   home.file."${config.xdg.configHome}/waybar/config" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/root/nixos/config/waybar/config-nb-media";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/config/waybar/config-nb-media";
   };
 
 # "/home/chaapp/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el"
