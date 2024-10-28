@@ -23,7 +23,7 @@
     htop
     neofetch
     nnn # terminal file manager
-
+    wev
     kdePackages.kate
     gnome.gnome-keyring
     cmake

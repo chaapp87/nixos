@@ -114,37 +114,28 @@
     profiles.media.isDefault = true;
     profiles.media.bookmarks = [
       {
-        name = "wikipedia";
-        tags = [ "wiki" ];
-        keyword = "wiki";
-        url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+        name = "Dennsen86";
+        keyword = "twitch";
+        url = "https://www.twitch.tv/dennsen86";
       }
       {
-        name = "Nix sites";
-        toolbar = true;
-        bookmarks = [
-          {
-            name = "homepage";
-            url = "https://nixos.org/";
-          }
-          {
-            name = "wiki";
-            tags = [ "wiki" "nix" ];
-            url = "https://wiki.nixos.org/";
-          }
-          {
-            name = "Nix package search";
-            url = "https://search.nixos.org/packages";
-          }
-          {
-            name = "Home-Manager config search";
-            url = "https://home-manager-options.extranix.com/?query=&release=release-24.05";
-          }
-        ];
+        name = "Nayfal";
+        keyword = "twitch";
+        url = "https://www.twitch.tv/nayfal";
+      }
+      {
+        name = "Twitch Startseite";
+        keyword = "twitch";
+        url = "https://www.twitch.tv";
+      }
+      {
+        name = "Youtube";
+        keyword = "youtube";
+        url = "https://www.youtube.com";
       }
     ];
     profiles.media.settings = {
-      "browser.toolbars.bookmarks.visibility" = true;
+      "browser.toolbars.bookmarks.visibility" = "always";
       "browser.search.region" = "DE";
     };
     
