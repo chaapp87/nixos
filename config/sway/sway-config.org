@@ -70,10 +70,10 @@
   #
   # Example configuration:
   #
-  exec swayidle -w \
-            timeout 300 'swaylock -f -c 000000' \
-            timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-            before-sleep 'swaylock -f -c 000000'
+  #exec swayidle -w \
+  #          timeout 300 'swaylock -f -c 000000' \
+  #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+  #          before-sleep 'swaylock -f -c 000000'
   #
   # This will lock your screen after 300 seconds of inactivity, then turn off
   # your displays after another 300 seconds, and turn your screens back on when
@@ -302,7 +302,7 @@
 #+begin_src shell :noweb-ref all
   #No titlebars
   #
-  default_border pixel
+  #default_border pixel
 #+end_src
 * gaps between containers
 #+begin_src shell :noweb-ref all

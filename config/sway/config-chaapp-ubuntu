@@ -234,6 +234,6 @@ bindsym $mod+0 input type:keyboard xkb_switch_layout next
 include /etc/sway/config.d/*
 #No titlebars
 #
-default_border pixel
+#default_border pixel
 #Gaps between windows
 gaps inner 10
