@@ -32,6 +32,7 @@
     libtool
 
     font-awesome
+    ttf-jetbrains-mono-nerd
     
      # archives
     zip
