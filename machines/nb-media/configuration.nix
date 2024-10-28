@@ -156,10 +156,10 @@
 
     
     # Auto-Login
-    #displayManager.preStart = "sleep 7";
-    #displayManager.autoLogin.user = "media";
+    displayManager.preStart = "sleep 7";
+    displayManager.autoLogin.user = "media";
 
-    #displayManager.defaultSession = "gnome";
+    displayManager.defaultSession = "sway";
     
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
