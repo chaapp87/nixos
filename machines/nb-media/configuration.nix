@@ -87,6 +87,10 @@
     pciutils # lspci
     usbutils # lsusb
 
+
+    sway
+    swaylock
+
   ];
   # Bootnloader.
 
@@ -145,8 +149,12 @@
       autoLogin.minimumUid = 1000;
     };
 
-    displayManager.preStart = "sleep 7";
-    displayManager.autoLogin.user = "media";
+    # Enable Sway
+    wayland.windowManager.sway.enable = true
+    
+    # Auto-Login
+    #displayManager.preStart = "sleep 7";
+    #displayManager.autoLogin.user = "media";
 
     #displayManager.defaultSession = "gnome";
     
