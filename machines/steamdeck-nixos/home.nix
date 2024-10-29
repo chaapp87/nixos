@@ -173,7 +173,7 @@
 
   # Sway Config 
   home.file."${config.xdg.configHome}/sway/config" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/config/sway/config-nb-media";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/config/sway/config-steamdeck-nixos";
   };
 
   # Waybar config

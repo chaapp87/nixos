@@ -25,7 +25,7 @@
     nnn # terminal file manager
 
     kdePackages.kate
-    gnome.gnome-keyring
+    gnome-keyring
     cmake
     gnumake
     gcc
@@ -52,7 +52,7 @@
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc  # it is a calculator fodesktopManager.xfce.enable = true;r the IPv4/v6 addresses
 
     # misc
     cowsay
@@ -156,14 +156,14 @@
 
     
     # Auto-Login
-    #displayManager.preStart = "sleep 7";
+    displayManager.preStart = "sleep 7";
     displayManager.autoLogin.user = "media";
 
     displayManager.defaultSession = "sway";
     
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
-    # Enable Gnome KEyring PAM in sddm
+    # Enable Gnome KEyring PAM in sddmgn
     blueman.enable = true;
     pipewire = {
       enable = true;
