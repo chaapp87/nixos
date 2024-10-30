@@ -53,6 +53,7 @@
     ferdium
     thunderbird
     chromium
+    element-desktop
     
    
   ];
