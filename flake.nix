@@ -30,6 +30,8 @@
                 # Import the previous configuration.nix we used,
                 # so the old configuration file still takes effect
                 ./machines/${rd-nb-nixos-name}/configuration.nix
+                ./modules/basepkgs.nix
+                ./modules/baseoptions.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
@@ -43,18 +45,20 @@
             };
 
 
-             nb-media-name = nixpkgs.lib.nixosSystem {
+             nb-media = nixpkgs.lib.nixosSystem {
         
       
               modules = [
                 # Import the previous configuration.nix we used,
                 # so the old configuration file still takes effect
                 ./machines/${nb-media-name}/configuration.nix
+                ./modules/basepkgs.nix
+                ./modules/baseoptions.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;
-                  home-manager.users.media = import ./machines/${nb-media-name}home.nix;
+                  home-manager.users.media = import ./machines/${nb-media-name}/home.nix;
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
@@ -72,6 +76,8 @@
                   nixpkgs.config.pkgs = import nixpkgs-unstable { inherit system; };
                 }
                 ./machines/${steamdeck-nixos-name}/configuration.nix
+                ./modules/basepkgs.nix
+                ./modules/baseoptions.nix
                 jovian.nixosModules.jovian
                 home-manager.nixosModules.home-manager
                 {
