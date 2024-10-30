@@ -6,9 +6,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    jovian.url = "github:Jovian-Experiments/Jovian-NixOS";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, jovian, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.steamdeck-nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -16,7 +17,9 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file stilnixos displaymanager.utologinl takes effect
         ./configuration.nix
+        jovian.nixosModules.jovian
         home-manager.nixosModules.home-manager
+
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

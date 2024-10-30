@@ -104,7 +104,7 @@
 
     networking = {
       hostName = "steamdeck-nixos"; # Define your hostname.
-      interfaces.enp4s0f3u1u1c2.ipv4.addresses = [ {
+      interfaces.enp4s0f3u1u1.ipv4.addresses = [ {
         address = "192.168.178.191";
         prefixLength = 24;
       } ];
@@ -114,6 +114,7 @@
       # Enable networking
       networkmanager.enable = true;
     };
+  systemd.network.wait-online.anyInterface = true;
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -144,22 +145,24 @@
         layout = "de";
         variant = "";
       };
-      desktopManager.xfce.enable = true;
+
     };
+      desktopManager.plasma6.enable = true;
+
     # Enable the KDE Plasma Desktop Environment.
-    displayManager.sddm = {
-      enable = true;
-      autoLogin.minimumUid = 1000;
-    };
+    #displayManager.sddm = {
+    #  enable = true;
+     # autoLogin.minimumUid = 1000;
+    #};
 
     # Enable Sway
 
     
     # Auto-Login
-    displayManager.preStart = "sleep 7";
-    displayManager.autoLogin.user = "media";
+    #displayManager.preStart = "sleep 7";
+    #displayManager.autoLogin.user = "media";
 
-    displayManager.defaultSession = "sway";
+    #displayManager.defaultSession = "sway";
     
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
@@ -184,7 +187,13 @@
 
   # Enable teamviewer service
 
+    # Jovian Settings
+    jovian.devices.steamdeck.enable = true;
+    jovian.steam.enable = true;
+    jovian.steam.autoStart = true;
 
+    jovian.steam.desktopSession = "plasma";
+    jovian.steam.user = "media";
   # Configure console keymap
   console.keyMap = "de";
 
