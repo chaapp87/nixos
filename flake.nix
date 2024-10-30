@@ -54,6 +54,7 @@
                 ./machines/${nb-media-name}/configuration.nix
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
+                ./modules/openssh.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
@@ -78,6 +79,7 @@
                 ./machines/${steamdeck-nixos-name}/configuration.nix
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
+                ./modules/openssh.nix
                 jovian.nixosModules.jovian
                 home-manager.nixosModules.home-manager
                 {
