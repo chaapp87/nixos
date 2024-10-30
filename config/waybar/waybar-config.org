@@ -25,6 +25,11 @@
   <<all>>
   <<nb-media>>
 #+end_src
+** steamdeck-nixos
+#+begin_src emacs-lisp :tangle config-nb-media :noweb yes
+  <<all>>
+  <<steamdeck-nixos>>
+#+end_src
 
 
 * waybar-config
@@ -242,13 +247,9 @@
                           "reboot": "reboot",
                           "suspend": "systemctl suspend",
                           "hibernate": "systemctl hibernate"
-                  }
+                  },
      },
 
-      "custom/scale": {
-          "format": "scale",
-           "on-click": "swaymsg output HDMI-A-1 scale 1.5"
-      }
-
+  
   }
 #+end_src

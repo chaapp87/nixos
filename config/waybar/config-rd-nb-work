@@ -211,13 +211,8 @@
                         "reboot": "reboot",
                         "suspend": "systemctl suspend",
                         "hibernate": "systemctl hibernate"
-                }
+                },
    },
 
-    "custom/scale": {
-        "format": "scale",
-         "on-click": "swaymsg output eDP-1 scale 1.5"
-         #"on-double-click": "swaymsg output eDP-1 scale 1"
-    }
 
 }
