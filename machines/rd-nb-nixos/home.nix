@@ -54,6 +54,7 @@
     thunderbird
     chromium
     element-desktop
+    nodejs_22
     
    
   ];

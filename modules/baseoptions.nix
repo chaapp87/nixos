@@ -49,7 +49,6 @@
       # no need to redefine it in your config for now)
       #media-session.enable = true;
     };
-    displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
     # Enable Gnome-Keyring
     gnome.gnome-keyring.enable = true;
@@ -69,7 +68,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+
 
 
   # Open ports in the firewall.

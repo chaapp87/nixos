@@ -32,6 +32,7 @@
                 ./machines/${rd-nb-nixos-name}/configuration.nix
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
+                ./modules/displayManagers.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
@@ -55,6 +56,7 @@
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
                 ./modules/openssh.nix
+                ./modules/displayManagers.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
