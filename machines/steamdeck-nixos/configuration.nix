@@ -36,9 +36,7 @@
 
   # You can disable this if you're only using the Wayland session.
   services = {
-
     blueman.enable = true;
-
   };
 
   
@@ -77,7 +75,11 @@
 
   programs.sway.enable = true;
   programs.waybar.enable = true;
-  
+
+
+  jovian.devices.steamdeck.enableControllerUdevRules = true;
+  jovian.steamos.enableBluetoothConfig = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -87,7 +89,6 @@
   # };
 
   # List services that you want to enable:
-
 
 fonts.packages = with pkgs; [
     font-awesome

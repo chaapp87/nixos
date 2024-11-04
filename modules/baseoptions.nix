@@ -68,7 +68,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
+  # gnupg options
+  programs.gnupg.agent = {                                                      
+    enable = true;
+    enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-qt;
+};
 
 
   # Open ports in the firewall.
