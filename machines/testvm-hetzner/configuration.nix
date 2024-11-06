@@ -25,7 +25,7 @@
 
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key
-    builtins.getEnv "TF_VAR_hcloud_ssh_key"
+    "CHANGE"
   ];
 
 

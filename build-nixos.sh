@@ -18,4 +18,12 @@ elif [[ "$TARGETSYSTEM" == "nb-media" ]]; then
     else
 	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#nb-media
     fi
+elif [[ "$TARGETSYSTEM" == "testvm-hetzner" ]]; then
+    REMOTEADDRESS="root@188.245.177.242"
+    if [[ "BUILDSYSTEM" == "remote" ]]; then
+	sudo nixos-rebuild --build-host $REMOTEADDRESS --target-host $REMOTEADDRESS switch --flake .#testvm-hetzner
+    else
+	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#testvm-hetzner
+    fi
+
 fi 
