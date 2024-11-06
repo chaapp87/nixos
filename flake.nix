@@ -8,9 +8,10 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     jovian.url = "github:Jovian-Experiments/Jovian-NixOS";
+    disko.url = "github:nix-community/disko";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, disko, ... }@inputs: 
     let
       system = "x86_64-linux";
     in
@@ -21,6 +22,7 @@
           rd-nb-nixos-name = "rd-nb-nixos";
           steamdeck-nixos-name = "steamdeck-nixos";
           nb-media-name = "nb-media";
+          testvm-hetzner = "testvm-hetzner";
         in
           {
             rd-nb-nixos = nixpkgs.lib.nixosSystem {
@@ -93,7 +95,14 @@
                   # arguments to home.nix
                 }
               ];
-            };
+             };
+
+             testvm-hetzner = nixpkgs.lib.nixosSystem {
+               modules = [
+                 disko.nixosModules.disko
+                 ./machines/${steamdeck-nixos-name}/configuration.nix
+               ];
+             };
           };
     };
 

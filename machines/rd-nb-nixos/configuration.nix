@@ -29,7 +29,10 @@
   # You can disable this if you're only using the Wayland session.
   services = {
     teamviewer.enable = true;
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = [ pkgs.hplipWithPlugin ];
+    };
     pcscd.enable = true;
     blueman.enable = true;
   };

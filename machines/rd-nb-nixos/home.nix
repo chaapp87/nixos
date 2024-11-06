@@ -55,7 +55,10 @@
     chromium
     element-desktop
     nodejs_22
-    
+    zoom-us
+    nix-output-monitor
+    terraform
+    terraform-ls
    
   ];
 

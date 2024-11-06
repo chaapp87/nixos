@@ -7,7 +7,7 @@ if [[ "$TARGETSYSTEM" == "rd-nb-nixos" ]]; then
 elif [[ "$TARGETSYSTEM" == "steamdeck-nixos" ]]; then
     REMOTEADDRESS="root@192.168.178.191"
     if [[ "BUILDSYSTEM" == "remote" ]]; then
-	sudo nixos-rebuild --build-host $REMOTEADDRESS --target-host $REMOTEADDRESS switch --flake .#steamdeck-nixos
+	sudo nixos-rebuild --build-host chaapp@102.168.178.87 --target-host $REMOTEADDRESS switch --flake .#steamdeck-nixos
     else
 	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#steamdeck-nixos
     fi
