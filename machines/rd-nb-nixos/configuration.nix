@@ -3,11 +3,18 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  # Not using 'pkgs.fetchgit' because as that would cause an infinite recursion
+  nix-gc-env = builtins.fetchGit {
+    url = "https://github.com/Julow/nix-gc-env";
+    rev = "4753f3c95891b711e29cb6a256807d22e16cf9cd";
+  };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      (import "${nix-gc-env}/nix_gc_env.nix")
     ];
 
    # Bootloader.
@@ -24,7 +31,12 @@
       networkmanager.enable = true;
     };
 
-
+# Run the GC weekly keeping the 5 most recent generation of each profiles.
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    delete_generations = "+5"; # Option added by nix-gc-env
+  };
 
   # You can disable this if you're only using the Wayland session.
   services = {
