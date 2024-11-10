@@ -34,6 +34,7 @@
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
                 ./modules/displayManagers.nix
+                ./modules/flatpak.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;
