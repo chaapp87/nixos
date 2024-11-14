@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731624129,
+        "narHash": "sha256-T9bJzJIY+JZsXOAF61yACSaHUKluYQ5/RbLNPEBSG1I=",
+        "ref": "main",
+        "rev": "9aa8241f87b0805a148f3e4f8f0aec5ca2601479",
+        "revCount": 77,
+        "type": "git",
+        "url": "ssh://git@github.com/chaapp87/dotfilesnew.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/chaapp87/dotfilesnew.git"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -112,6 +129,7 @@
     },
     "root": {
       "inputs": {
+        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "jovian": "jovian",
         "nixpkgs": "nixpkgs_2",

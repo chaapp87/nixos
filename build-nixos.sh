@@ -1,8 +1,15 @@
 
 TARGETSYSTEM=$1
-BUILDSYSTEM=$2
+TYPE=$2
+BUILDSYSTEM=$3
 
 if [[ "$TARGETSYSTEM" == "rd-nb-nixos" ]]; then
+    if [[ "$TYPE" == "dotfiles" ]]; then
+	echo "Updating flake.lock"
+	nix flake lock --update-input dotfiles
+    else
+	echo "Not flake update"
+    fi
     sudo nixos-rebuild switch --flake .#rd-nb-nixos
 elif [[ "$TARGETSYSTEM" == "steamdeck-nixos" ]]; then
     REMOTEADDRESS="root@192.168.178.191"
@@ -25,5 +32,4 @@ elif [[ "$TARGETSYSTEM" == "testvm-hetzner" ]]; then
     else
 	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#testvm-hetzner
     fi
-
-fi 
+fi

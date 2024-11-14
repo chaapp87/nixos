@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, dotfiles, ... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -190,7 +190,8 @@
 
   # Link my own dotfiles
   # emacs
-  xdg.configFile."emacs/init.el".source = ./dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
+  xdg.configFile."emacs/init.el".source = "${dotfiles}/roles/emacs/files/init-rd-nb-nixos.el";
+  # xdg.configFile."emacs/init.el".source = ../../dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
   # home.file."${config.xdg.configHome}/emacs/init.el" = {
   #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
   # };

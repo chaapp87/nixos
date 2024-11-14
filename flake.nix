@@ -8,9 +8,11 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     jovian.url = "github:Jovian-Experiments/Jovian-NixOS";
+    dotfiles.url = "git+ssh://git@github.com/chaapp87/dotfilesnew.git?ref=main";
+    dotfiles.flake = false;
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, dotfiles, ... }@inputs: 
     let
       system = "x86_64-linux";
     in
@@ -41,6 +43,7 @@
                   home-manager.useUserPackages = true;
                   home-manager.users.chaapp = import ./machines/${rd-nb-nixos-name}/home.nix;
                   home-manager.backupFileExtension = "hm-backup";
+                  home-manager.extraSpecialArgs = { inherit dotfiles; };
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
                 }
