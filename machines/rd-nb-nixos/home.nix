@@ -192,7 +192,7 @@
   # emacs
 
   home.file."${config.xdg.configHome}/emacs/init.el" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
   };
 
 
