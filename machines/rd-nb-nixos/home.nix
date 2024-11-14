@@ -190,10 +190,10 @@
 
   # Link my own dotfiles
   # emacs
-
-  home.file."${config.xdg.configHome}/emacs/init.el" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
-  };
+  xdg.configFile."emacs/init.el".source = ./dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
+  # home.file."${config.xdg.configHome}/emacs/init.el" = {
+  #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
+  # };
 
 
 # "/home/chaapp/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el"
