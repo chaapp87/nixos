@@ -32,4 +32,12 @@ elif [[ "$TARGETSYSTEM" == "testvm-hetzner" ]]; then
     else
 	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#testvm-hetzner
     fi
+elif [[ "$TARGETSYSTEM" == "gaming-nixos" ]]; then
+    REMOTEADDRESS="root@192.168.178.87"
+    if [[ "BUILDSYSTEM" == "remote" ]]; then
+	sudo nixos-rebuild --build-host $REMOTEADDRESS --target-host $REMOTEADDRESS switch --flake .#gaming-nixos
+    else
+	sudo nixos-rebuild --build-host "" --target-host $REMOTEADDRESS switch --flake .#gaming-nixos
+    fi
+
 fi

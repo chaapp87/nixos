@@ -2,8 +2,8 @@
 
 {
   # TODO please change the username & home directory to your own
-  home.username = "media";
-  home.homeDirectory = "/home/media";
+  home.username = "gaming";
+  home.homeDirectory = "/home/gaming";
 
   home.sessionVariables = {
   SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket";
