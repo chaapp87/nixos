@@ -10,9 +10,14 @@
     jovian.url = "github:Jovian-Experiments/Jovian-NixOS";
     dotfiles.url = "git+ssh://git@github.com/chaapp87/dotfilesnew.git?ref=main";
     dotfiles.flake = false;
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, dotfiles, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, dotfiles, plasma-manager, ... }@inputs: 
     let
       system = "x86_64-linux";
     in
@@ -47,6 +52,7 @@
                   home-manager.extraSpecialArgs = { inherit dotfiles; };
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
+                  home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
                 }
               ];
             };
@@ -71,6 +77,7 @@
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
+                  home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
                 }
               ];
              };
@@ -95,6 +102,7 @@
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
+                  home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
                 }
               ];
              };
@@ -122,6 +130,7 @@
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
+                  home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
                 }
               ];
              };
