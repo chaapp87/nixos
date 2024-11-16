@@ -24,7 +24,7 @@
           steamdeck-nixos-name = "steamdeck-nixos";
           nb-media-name = "nb-media";
           testvm-hetzner-name = "testvm-hetzner";
-          gaming-nixos = "gaming-nixos";
+          gaming-nixos-name = "gaming-nixos";
         in
           {
             rd-nb-nixos = nixpkgs.lib.nixosSystem {
@@ -81,7 +81,7 @@
               modules = [
                 # Import the previous configuration.nix we used,
                 # so the old configuration file still takes effect
-                ./machines/${nb-media-name}/configuration.nix
+                ./machines/${gaming-nixos-name}/configuration.nix
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
                 ./modules/openssh.nix
@@ -91,7 +91,7 @@
                 {
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;
-                  home-manager.users.media = import ./machines/${nb-media-name}/home.nix;
+                  home-manager.users.media = import ./machines/${gaming-nixos-name}/home.nix;
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
