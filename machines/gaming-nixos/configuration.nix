@@ -11,10 +11,11 @@
     ];
 
    # Bootnloader.
-
+  
   boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader.grub.enable = true;
+    loader.grub.device = "/dev/sda";
+    loader.grub.useOSProber = true;
   };
 
     networking = {
