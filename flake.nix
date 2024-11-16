@@ -91,7 +91,7 @@
                 {
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;
-                  home-manager.users.media = import ./machines/${gaming-nixos-name}/home.nix;
+                  home-manager.users.gaming = import ./machines/${gaming-nixos-name}/home.nix;
                   home-manager.backupFileExtension = "hm-backup";
                   # Optionally, use home-manager.extraSpecialArgs to pass
                   # arguments to home.nix
