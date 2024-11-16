@@ -20,7 +20,7 @@
 
     networking = {
       hostName = "gaming-nixos"; # Define your hostname.
-      interfaces.eno1.ipv4.addresses = [ {
+      interfaces.enp8s0.ipv4.addresses = [ {
         address = "192.168.178.87";
         prefixLength = 24;
       } ];
