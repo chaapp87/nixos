@@ -53,7 +53,6 @@ imports = [
     yubioath-flutter
     syncthing
     syncthing-tray
-    retroarchFull
     dmenu
     discord
     ferdium
