@@ -5,7 +5,7 @@
 
   services.sunshine = {
     enable = true;
-    autostart = true;
+    autoStart = true;
     capSysAdmin = true;
   };
 }
