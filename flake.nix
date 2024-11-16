@@ -85,6 +85,7 @@
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
                 ./modules/openssh.nix
+                ./modules/sunshine.nix
                 ./modules/displayManagers.nix
                 home-manager.nixosModules.home-manager
                 {
