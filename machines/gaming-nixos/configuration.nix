@@ -46,7 +46,7 @@
   users.users.gaming = {
     isNormalUser = true;
     linger = true;
-    description = "media";
+    description = "gaming";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       ];

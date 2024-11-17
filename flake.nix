@@ -3,9 +3,8 @@
 
   inputs = {
     # NixOS official package source, using the nixos-23.11 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    nixpkgs-unstable = { url = "github:nixos/nixpkgs/nixos-unstable"; };
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     jovian.url = "github:Jovian-Experiments/Jovian-NixOS";
     dotfiles.url = "git+ssh://git@github.com/chaapp87/dotfilesnew.git?ref=main";
@@ -17,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, jovian, dotfiles, plasma-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, jovian, dotfiles, plasma-manager, ... }@inputs: 
     let
       system = "x86_64-linux";
     in
@@ -42,6 +41,7 @@
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
                 ./modules/displayManagers.nix
+                ./modules/sunshine.nix
                 ./modules/flatpak.nix
                 home-manager.nixosModules.home-manager
                 {
@@ -108,18 +108,19 @@
              };
 
              
-             steamdeck-nixos = nixpkgs-unstable.lib.nixosSystem {
+             steamdeck-nixos = nixpkgs.lib.nixosSystem {
         
       
               modules = [
                 # Import the previous configuration.nix we used,
                 # so the old configuration file still takes effect
                 {
-                  nixpkgs.config.pkgs = import nixpkgs-unstable { inherit system; };
+                  nixpkgs.config.pkgs = import nixpkgs { inherit system; };
                 }
                 ./machines/${steamdeck-nixos-name}/configuration.nix
                 ./modules/basepkgs.nix
                 ./modules/baseoptions.nix
+                ./modules/sunshine.nix
                 ./modules/openssh.nix
                 jovian.nixosModules.jovian
                 home-manager.nixosModules.home-manager

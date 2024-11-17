@@ -77,8 +77,8 @@
   programs.waybar.enable = true;
 
 
-  # jovian.devices.steamdeck.enableControllerUdevRules = true;
-  # jovian.steamos.enableBluetoothConfig = true;
+  jovian.devices.steamdeck.enableControllerUdevRules = true;
+  jovian.steamos.enableBluetoothConfig = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

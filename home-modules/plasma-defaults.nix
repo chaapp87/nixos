@@ -12,8 +12,8 @@ programs.plasma = {
         theme = "Bibata-Modern-Ice";
         size = 32;
       };
-      iconTheme = "Papirus";
-      wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
+      #iconTheme = "Breeze-Dark";
+      #wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
     };
 };
 }
