@@ -1,0 +1,26 @@
+* Installation of NixOS with disko
+
+** Install NixOS from ISO
+Use a new NixOS installer ISO to boot into NixOS Live installer mode. Graphical or text does not matter.
+
+** Download and unzip the repo
+#+begin_src shell
+  wget https://github.com/chaapp87/nixos/archive/refs/heads/main.zip
+  unzip main.zip
+  cd main.zip
+#+end_src
+
+** Use Disko to partition Disk
+#+begin_src shell
+  sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disko/disko-layout-sda.nix
+#+end_src
+
+** Check that the new filesystem has been mounted
+#+begin_src shell
+  mount | grep /mnt
+#+end_src
+
+** Genererate Hardware configuration
+#+begin_src shell
+  nixos-generate-config --root /mnt && nixos-install
+#+end_src

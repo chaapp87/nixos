@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, scripts, ... }:
 let
   # Not using 'pkgs.fetchgit' because as that would cause an infinite recursion
   nix-gc-env = builtins.fetchGit {
@@ -65,6 +65,11 @@ in
   };
 
 
+  environment.systemPackages = with pkgs; [
+    scripts.defaultPackage.${pkgs.system}
+    scripts.my-script2.${pkgs.system}
+  ];
+  
   # Steam 32 Bit fix
   programs.steam.enable = true; 
 

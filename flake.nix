@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    scripts = {
+      url = "path:/home/chaapp/git/chaapp-scripts";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, jovian, dotfiles, plasma-manager, ... }@inputs: 
@@ -33,7 +37,7 @@
           {
             rd-nb-nixos = nixpkgs.lib.nixosSystem {
         
-      
+              #_module.args = { inherit scripts; };
               modules = [
                 # Import the previous configuration.nix we used,
                 # so the old configuration file still takes effect
@@ -54,6 +58,9 @@
                   # arguments to home.nix
                   home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
                 }
+                
+                  { _module.args = inputs; }
+                
               ];
             };
 

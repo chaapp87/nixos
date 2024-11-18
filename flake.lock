@@ -111,6 +111,18 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-OZiZ3m8SCMfh3B6bfGC/Bm4x3qc1m2SVEAlkV6iY7Yg=",
+        "path": "/nix/store/hfz1qqd0z8amlgn8qwich1dvkmldik36-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -140,7 +152,23 @@
         "home-manager": "home-manager",
         "jovian": "jovian",
         "nixpkgs": "nixpkgs_2",
-        "plasma-manager": "plasma-manager"
+        "plasma-manager": "plasma-manager",
+        "scripts": "scripts"
+      }
+    },
+    "scripts": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1731880818,
+        "narHash": "sha256-7B+KV7HQJF7WPepW+/Qwrxz6CSaW4VA/yD3RyIqiN+g=",
+        "path": "/home/chaapp/git/chaapp-scripts",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/chaapp/git/chaapp-scripts",
+        "type": "path"
       }
     }
   },
