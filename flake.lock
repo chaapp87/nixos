@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1731624129,
-        "narHash": "sha256-T9bJzJIY+JZsXOAF61yACSaHUKluYQ5/RbLNPEBSG1I=",
+        "lastModified": 1731933161,
+        "narHash": "sha256-yiwPK811CojnDf8IfiR7gBEiW0AY0qmMLmOJACfNzqU=",
         "ref": "main",
-        "rev": "9aa8241f87b0805a148f3e4f8f0aec5ca2601479",
-        "revCount": 77,
+        "rev": "cde3ed3406ae860dfc97e3ef77dff7343f83f450",
+        "revCount": 78,
         "type": "git",
         "url": "ssh://git@github.com/chaapp87/dotfilesnew.git"
       },
@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1731832479,
-        "narHash": "sha256-icDDuYwJ0avTMZTxe1qyU/Baht5JOqw4pb5mWpR+hT0=",
+        "lastModified": 1731887066,
+        "narHash": "sha256-uw7K/RsYioJicV79Nl39yjtfhdfTDU2aRxnBgvFhkZ8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5056a1cf0ce7c2a08ab50713b6c4af77975f6111",
+        "rev": "f3a2ff69586f3a54b461526e5702b1a2f81e740a",
         "type": "github"
       },
       "original": {
@@ -161,14 +161,18 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1731880818,
-        "narHash": "sha256-7B+KV7HQJF7WPepW+/Qwrxz6CSaW4VA/yD3RyIqiN+g=",
-        "path": "/home/chaapp/git/chaapp-scripts",
-        "type": "path"
+        "lastModified": 1731935646,
+        "narHash": "sha256-TBHfnIiPmJZqK/fGp0MxEZOlduue3zRxSUKK/w/M55k=",
+        "ref": "main",
+        "rev": "c310301b6f9a3015d1b807959a97c7a589ceb991",
+        "revCount": 4,
+        "type": "git",
+        "url": "ssh://git@github.com/chaapp87/chaapp-scripts.git"
       },
       "original": {
-        "path": "/home/chaapp/git/chaapp-scripts",
-        "type": "path"
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/chaapp87/chaapp-scripts.git"
       }
     }
   },

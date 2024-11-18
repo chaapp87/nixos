@@ -28,7 +28,9 @@
   
   # Service configuration
 
-  services = {
+    services = {
+      envfs.enable = true;
+
     xserver = {
       enable = true;
       xkb = {

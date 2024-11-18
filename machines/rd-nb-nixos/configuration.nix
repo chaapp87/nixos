@@ -41,6 +41,8 @@ in
   # You can disable this if you're only using the Wayland session.
   services = {
     teamviewer.enable = true;
+    xserver.windowManager.qtile.enable = true;
+    xserver.dpi = 1;
     printing = {
       enable = true;
       drivers = [ pkgs.hplipWithPlugin ];
@@ -59,7 +61,7 @@ in
     isNormalUser = true;
     linger = true;
     description = "chaapp";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       ];
   };
@@ -68,6 +70,7 @@ in
   environment.systemPackages = with pkgs; [
     scripts.defaultPackage.${pkgs.system}
     scripts.my-script2.${pkgs.system}
+    scripts.dmlinks-default.${pkgs.system}
   ];
   
   # Steam 32 Bit fix

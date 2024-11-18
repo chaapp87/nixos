@@ -56,6 +56,8 @@ imports = [
     dmenu
     discord
     ferdium
+    feh
+    pcmanfm
     thunderbird
     chromium
     element-desktop
@@ -64,6 +66,9 @@ imports = [
     nix-output-monitor
     terraform
     terraform-ls
+    arandr
+    networkmanagerapplet
+    fzf
    
   ];
 
@@ -170,11 +175,11 @@ imports = [
     
   programs.emacs = {
     enable = true;
-     package = pkgs.emacs29-pgtk;
+     package = pkgs.emacs29;
   };
   services.emacs = {
     enable = true;
-    package = pkgs.emacs29-pgtk;
+    package = pkgs.emacs29;
   };
   
   # This value determines the home Manager release that your
@@ -196,6 +201,8 @@ imports = [
   # Link my own dotfiles
   # emacs
   xdg.configFile."emacs/init.el".source = "${dotfiles}/roles/emacs/files/init-rd-nb-nixos.el";
+  xdg.configFile."qtile/config.py".source = "${dotfiles}/roles/qtile/files/config-default.py";
+  xdg.configFile."qtile/autostart.sh".source = "${dotfiles}/roles/qtile/files/default-autostart.sh";
   # xdg.configFile."emacs/init.el".source = ../../dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
   # home.file."${config.xdg.configHome}/emacs/init.el" = {
   #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";

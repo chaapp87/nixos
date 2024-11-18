@@ -15,7 +15,7 @@
       inputs.home-manager.follows = "home-manager";
     };
     scripts = {
-      url = "path:/home/chaapp/git/chaapp-scripts";
+      url = "git+ssh://git@github.com/chaapp87/chaapp-scripts.git?ref=main";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -47,6 +47,8 @@
                 ./modules/displayManagers.nix
                 ./modules/sunshine.nix
                 ./modules/flatpak.nix
+                ./modules/docker.nix
+                ./modules/ferdium-server.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;

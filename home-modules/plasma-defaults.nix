@@ -3,6 +3,14 @@
 programs.plasma = {
     enable = true;
 
+
+    # Hotkeys
+    hotkeys.commands."Link-Helper" = {
+      name = "DMlinks";
+      key = "Meta+q";
+      command = ''alacritty -e "dmlinks-default"'';
+    };
+    
     #
     # Some high-level settings:
     #
