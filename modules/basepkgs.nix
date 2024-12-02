@@ -10,7 +10,7 @@
     nnn # terminal file manager
     wev
     kdePackages.kate
-    gnome.gnome-keyring
+    gnome-keyring
     cmake
     gnumake
     gcc

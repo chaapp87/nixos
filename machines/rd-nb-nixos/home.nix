@@ -69,6 +69,11 @@ imports = [
     arandr
     networkmanagerapplet
     fzf
+    ferdium
+    asunder
+    reaper
+    hplip
+    vlc
    
   ];
 

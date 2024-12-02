@@ -16,6 +16,12 @@
     loader.grub.enable = true;
     loader.grub.device = "/dev/sda";
     loader.grub.useOSProber = true;
+    extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback
+    ];
+    extraModProbeConfig = ''
+      options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+    '';
   };
 
     networking = {
@@ -38,7 +44,7 @@
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-
+  security.polkit.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

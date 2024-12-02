@@ -49,7 +49,9 @@
     dmenu
     discord
     chromium
-    
+    cabextract
+    wget
+    obs-studio
    
   ];
 
