@@ -41,7 +41,6 @@ in
   # You can disable this if you're only using the Wayland session.
   services = {
     teamviewer.enable = true;
-    xserver.windowManager.qtile.enable = true;
     xserver.dpi = 1;
     printing = {
       enable = true;

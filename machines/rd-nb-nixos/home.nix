@@ -74,6 +74,7 @@ imports = [
     reaper
     hplip
     vlc
+    libreoffice
    
   ];
 
@@ -207,7 +208,8 @@ imports = [
   # emacs
   xdg.configFile."emacs/init.el".source = "${dotfiles}/roles/emacs/files/init-rd-nb-nixos.el";
   xdg.configFile."qtile/config.py".source = "${dotfiles}/roles/qtile/files/config-default.py";
-  xdg.configFile."qtile/autostart.sh".source = "${dotfiles}/roles/qtile/files/default-autostart.sh";
+
+
   # xdg.configFile."emacs/init.el".source = ../../dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
   # home.file."${config.xdg.configHome}/emacs/init.el" = {
   #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";

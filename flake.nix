@@ -49,6 +49,7 @@
                 ./modules/flatpak.nix
                 ./modules/docker.nix
                 ./modules/ferdium-server.nix
+                ./modules/qtile.nix
                 home-manager.nixosModules.home-manager
                 {
                   home-manager.useGlobalPkgs = true;

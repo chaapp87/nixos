@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1731933161,
-        "narHash": "sha256-yiwPK811CojnDf8IfiR7gBEiW0AY0qmMLmOJACfNzqU=",
+        "lastModified": 1732819712,
+        "narHash": "sha256-SZk0KoceV4izZtn9zFlQ1Pw85FgtyIQufR89ezpLv7g=",
         "ref": "main",
-        "rev": "cde3ed3406ae860dfc97e3ef77dff7343f83f450",
-        "revCount": 78,
+        "rev": "3b2711c367326fbd83c7825683d9753cfd3dc657",
+        "revCount": 87,
         "type": "git",
         "url": "ssh://git@github.com/chaapp87/dotfilesnew.git"
       },
@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733045511,
-        "narHash": "sha256-n8AldXJRNVMm2UZ6yN0HwVxlARY2Cm/uhdOw76tQ0OI=",
+        "lastModified": 1733317578,
+        "narHash": "sha256-anN/LcP5IuqEARvhPETg1vnbyG3IQ0wdvSAYEJfIQzA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4964f3c6fc17ae4578e762d3dc86b10fe890860e",
+        "rev": "ad48eb25cd0b00ce730da00fa1f8e6e6c27b397d",
         "type": "github"
       },
       "original": {
@@ -97,11 +97,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1732837521,
-        "narHash": "sha256-jNRNr49UiuIwaarqijgdTR2qLPifxsVhlJrKzQ8XUIE=",
+        "lastModified": 1733212471,
+        "narHash": "sha256-M1+uCoV5igihRfcUKrr1riygbe73/dzNnzPsmaLCmpo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "970e93b9f82e2a0f3675757eb0bfc73297cc6370",
+        "rev": "55d15ad12a74eb7d4646254e13638ad0c4128776",
         "type": "github"
       },
       "original": {
