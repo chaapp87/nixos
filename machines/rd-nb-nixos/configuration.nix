@@ -115,6 +115,20 @@ in
 # Environment variables
 
     system.stateVersion = "24.05"; # Did you read the comment?
-
-  
+    # Overlays
+    nixpkgs.overlays = [
+      (
+        self: super: {
+          python3 = super.python3.override {
+            packageOverrides = pyself: pysuper: {
+              dbus-next = pysuper.dbus-next.overrideAttrs (_: {
+                doCheck = false;
+                doInstallCheck = false; 
+              });
+            };
+          };
+        }
+      ) 
+    ];
+    
 }
