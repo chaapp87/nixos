@@ -202,6 +202,10 @@ programs.emacs = {
 #  home.file.".config/emacs/init.el" = {
 #    source = ../../../roles/emacs/files/init-rd-nb-nixos.el;
 #  };
+  #xdg.configFile."emacs/init.el".source = ../../../dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el;
+   home.file."${config.xdg.configHome}/emacs/init.el" = {
+     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfilesnew/roles/emacs/files/init-rd-nb-nixos.el";
+   };
     
 
   
