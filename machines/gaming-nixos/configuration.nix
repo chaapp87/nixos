@@ -19,7 +19,7 @@
     extraModulePackages = with config.boot.kernelPackages; [
       v4l2loopback
     ];
-    extraModProbeConfig = ''
+    extraModprobeConfig = ''
       options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
     '';
   };
@@ -49,13 +49,24 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.gaming = {
-    isNormalUser = true;
-    linger = true;
-    description = "gaming";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
+  users.users = {
+    gaming = {
+      isNormalUser = true;
+      linger = true;
+      description = "gaming";
+      extraGroups = [ "networkmanager" "wheel" ];
+      packages = with pkgs; [
       ];
+    };
+    chaapp = {
+      isSystemUser = true;
+      initialPassword = "Password123";
+      linger = true;
+      description = "chaapp";
+      extraGroups = [ "networkmanager" "wheel" ];
+      packages = with pkgs; [
+      ];
+    };
   };
 
   # Install firefox.

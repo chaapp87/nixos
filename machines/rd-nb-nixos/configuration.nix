@@ -41,7 +41,7 @@ in
   # You can disable this if you're only using the Wayland session.
   services = {
     teamviewer.enable = true;
-    xserver.dpi = 1;
+    xserver.dpi = 120;
     printing = {
       enable = true;
       drivers = [ pkgs.hplipWithPlugin ];
@@ -113,7 +113,12 @@ in
     };
   };
 # Environment variables
+  environment.variables = {
+    GDK_SCALE = "1";
+    GDK_DPI_SCALE = "1";
+  };
 
+    
     system.stateVersion = "24.05"; # Did you read the comment?
     # Overlays
     nixpkgs.overlays = [
