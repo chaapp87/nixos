@@ -6,7 +6,7 @@
   home.homeDirectory = "/home/chaapp";
 
   home.sessionVariables = {
-  SSH_AUTH_SOCK="/run/user/1001/ssh-agent.socket";
+  SSH_AUTH_SOCK="/run/user/993/ssh-agent.socket";
  
 };
 

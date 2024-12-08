@@ -59,16 +59,21 @@
       ];
     };
     chaapp = {
-      isSystemUser = true;
+      isNormalUser = true;
       initialPassword = "Password123";
       linger = true;
+      home = "/home/chaapp";
       description = "chaapp";
+      group = "chaapp";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [
       ];
     };
   };
 
+
+  users.groups.chaapp = {};
+  
   # Install firefox.
   programs.firefox.enable = true;
 
