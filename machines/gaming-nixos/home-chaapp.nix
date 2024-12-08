@@ -52,6 +52,8 @@
     cabextract
     wget
     obs-studio
+    keepassxc
+ 
    
   ];
 
@@ -156,7 +158,16 @@
     
   };
     
-
+programs.emacs = {
+    enable = true;
+     package = pkgs.emacs29;
+  };
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs29;
+  };
+  
+  
   
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

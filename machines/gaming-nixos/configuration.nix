@@ -48,6 +48,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     gaming = {
@@ -73,6 +75,22 @@
 
 
   users.groups.chaapp = {};
+
+systemd = {
+    user.services.ssh-agent = {
+      enable = true;
+      after = [ "network.target" ];
+      wantedBy = [ "default.target" ];
+      description = "SSH key agent";
+      serviceConfig = {
+        Type = "simple";
+        Environment=''SSH_AUTH_SOCK=%t/ssh-agent.socket'';
+        ExecStart = ''/run/current-system/sw/bin/ssh-agent -D -a $SSH_AUTH_SOCK'';
+      };
+    };
+};
+
+
   
   # Install firefox.
   programs.firefox.enable = true;
